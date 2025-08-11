@@ -1,0 +1,263 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Light mode variables */
+:root {
+  --bg-color: #f9f9fb;
+  --text-color: #111;
+  --primary-color: #5c00ff;
+  --secondary-color: #7a4dff;
+  --btn-bg: var(--primary-color);
+  --btn-text: #fff;
+  --btn-outline-bg: transparent;
+  --btn-outline-text: var(--primary-color);
+  --header-bg: #fff;
+  --footer-bg: #fff;
+  --nav-link-color: #444;
+  --nav-link-active: var(--primary-color);
+  --link-hover: #4a00e0;
+}
+
+/* Dark mode variables */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #e1e1e1;
+  --primary-color: #7a4dff;
+  --secondary-color: #5c00ff;
+  --btn-bg: var(--secondary-color);
+  --btn-text: #fff;
+  --btn-outline-bg: transparent;
+  --btn-outline-text: var(--secondary-color);
+  --header-bg: #1f1f1f;
+  --footer-bg: #1f1f1f;
+  --nav-link-color: #ccc;
+  --nav-link-active: var(--secondary-color);
+  --link-hover: #b39cff;
+}
+
+/* Header */
+header {
+  background-color: var(--header-bg);
+  padding: 1rem 0;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+#mode-toggle {
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+#mode-toggle:hover,
+#mode-toggle:focus {
+  color: var(--secondary-color);
+  outline: none;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--header-bg);
+  margin-top: 0.5rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  border-bottom-color: var(--primary-color);
+  outline: none;
+}
+
+.nav-list a.active {
+  border-bottom-color: var(--nav-link-active);
+  color: var(--nav-link-active);
+}
+
+/* Main content */
+main {
+  flex: 1 0 auto;
+  padding: 2rem 0;
+}
+
+#intro h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+#intro p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--link-hover);
+  outline: none;
+}
+
+.btn-outline {
+  background-color: var(--btn-outline-bg);
+  color: var(--btn-outline-text);
+  border: 2px solid var(--btn-outline-text);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--btn-outline-text);
+  color: var(--btn-text);
+  outline: none;
+}
+
+/* About section */
+#about-section p {
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Contact section */
+#contact-section ul.contact-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+#contact-section ul.contact-list li {
+  margin-bottom: 0.8rem;
+}
+
+#contact-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#contact-section a:hover,
+#contact-section a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  padding: 1rem 0;
+  text-align: center;
+  flex-shrink: 0;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  border-top: 1px solid #ccc;
+  user-select: none;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
