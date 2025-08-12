@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Sagad Hassan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Sagad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <header>
-    <div class="container header-content">
-      <h1>Sagad Hassan</h1>
-      <button id="mode-toggle" aria-label="Toggle light/dark mode">🌙</button>
-    </div>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>About Me</h1>
+    <p>Welcome to my portfolio! I'm Sagad — passionate about learning, coding, and healthcare.</p>
   </header>
 
-  <main class="container fade-in">
-    <section id="about-section">
-      <h2>About Me</h2>
-      <p>
-        Hello! I am Sagad Hassan, a dedicated nurse and healthcare professional passionate about providing excellent patient care and supporting health education.  
-      </p>
-      <p>
-        With years of experience in the healthcare field, I have developed strong communication skills, a compassionate attitude, and the ability to work efficiently under pressure.
-      </p>
-      <p>
-        This portfolio showcases my background and ways to contact me.
-      </p>
-    </section>
-  </main>
+  <section>
+    <h2>Who I Am</h2>
+    <p>
+      I'm a nursing student with a growing interest in technology. I love exploring how artificial intelligence can improve healthcare, and I'm diving into HTML and coding to expand my skills.
+    </p>
 
-  <footer>
-    <div class="container footer-content">
-      <p>© <span id="year"></span> Sagad Hassan</p>
-    </div>
-  </footer>
+    <h2>What I Do</h2>
+    <p>
+      I balance academic research with creative hobbies like gaming, podcasts, and videos. My goal is to combine my healthcare knowledge with tech to make a real-world impact.
+    </p>
+  </section>
 
-  <script src="script.js"></script>
 </body>
 </html>
+
